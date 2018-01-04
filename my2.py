@@ -149,68 +149,69 @@ class App(QWidget):
 
 
         ypos += 25
-        temper = QLabel(frame1)
-        temper.setObjectName("temper")
-        temper.setStyleSheet("#temper { background-color: transparent; color: " +
+        self.temper = QLabel(frame1)
+        self.temper.setObjectName("temper")
+        self.temper.setStyleSheet("#temper { background-color: transparent; color: " +
                             Config.textcolor +
                             "; font-size: " +
-                            str(int(100 * xscale)) +
+                            str(int(40 * xscale)) +
                             "px; " +
                             Config.fontattr +
                             "}")
-        temper.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        temper.setGeometry(3 * xscale, ypos * yscale , 300 * xscale, 100)
+        self.temper.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.temper.setGeometry(3 * xscale, ypos * yscale , 300 * xscale, 100)
 
-        temper2 = QLabel(frame2)
-        temper2.setObjectName("temper2")
-        temper2.setStyleSheet("#temper2 { background-color: transparent; color: " +
+        self.temper2 = QLabel(frame2)
+        self.temper2.setObjectName("temper2")
+        self.temper2.setStyleSheet("#temper2 { background-color: transparent; color: " +
                             Config.textcolor +
                             "; font-size: " +
                             str(int(100 * xscale)) +
                             "px; " +
                             Config.fontattr +
                             "}")
-        temper2.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        temper2.setGeometry(125 * xscale, 780 * yscale, 300 * xscale, 100)
+        self.temper2.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.temper2.setGeometry(125 * xscale, 780 * yscale, 300 * xscale, 100)
 
         ypos += 115
-        humidity = QLabel(frame1)
-        humidity.setObjectName("humidity")
-        humidity.setStyleSheet("#humidity { background-color: transparent; color: " +
+        
+        self.humidity = QLabel(frame1)
+        self.humidity.setObjectName("humidity")
+        self.humidity.setStyleSheet("#humidity { background-color: transparent; color: " +
                             Config.textcolor +
                             "; font-size: " +
-                            str(int(30 * xscale)) +
+                            str(int(40 * xscale)) +
                             "px; " +
                             Config.fontattr +
                             "}")
-        humidity.setAlignment(Qt.AlignHCenter | Qt.AlignTop) 
-        humidity.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
+        self.humidity.setAlignment(Qt.AlignHCenter | Qt.AlignTop) 
+        self.humidity.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
 
         ypos += 30
-        indoorTemp = QLabel(frame1)
-        indoorTemp.setObjectName("indoorTemp")
-        indoorTemp.setStyleSheet("#indoorTemp { background-color: transparent; color: " +
+        self.indoorTemp = QLabel(frame1)
+        self.indoorTemp.setObjectName("indoorTemp")
+        self.indoorTemp.setStyleSheet("#indoorTemp { background-color: transparent; color: " +
                             Config.indoorTextColor +
                             "; font-size: " +
                             str(int(70 * xscale)) +
                             "px; " +
                             Config.fontattr +
                             "}")
-        indoorTemp.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        indoorTemp.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
+        self.indoorTemp.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.indoorTemp.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
 
         ypos += 75
-        indoorHumi = QLabel(frame1)
-        indoorHumi.setObjectName("wind")
-        indoorHumi.setStyleSheet("#wind { background-color: transparent; color: " +
+        self.indoorHumi = QLabel(frame1)
+        self.indoorHumi.setObjectName("wind")
+        self.indoorHumi.setStyleSheet("#wind { background-color: transparent; color: " +
                         Config.textcolor +
                         "; font-size: " +
                         str(int(30 * xscale)) +
                         "px; " +
                         Config.fontattr +
                         "}")
-        indoorHumi.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        indoorHumi.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
+        self.indoorHumi.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.indoorHumi.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
 
         ypos += 20
         wind2 = QLabel(frame1)
@@ -226,51 +227,58 @@ class App(QWidget):
         wind2.setGeometry(3 * xscale , ypos * yscale , 300 * xscale, 100)
 
         ypos += 20
-        wdate = QLabel(frame1)
-        wdate.setObjectName("wdate")
-        wdate.setStyleSheet("#wdate { background-color: transparent; color: " +
+        self.wdate = QLabel(frame1)
+        self.wdate.setObjectName("wdate")
+        self.wdate.setStyleSheet("#wdate { background-color: transparent; color: " +
                             Config.textcolor +
                             "; font-size: " +
                             str(int(15 * xscale)) +
                             "px; " +
                             Config.fontattr +
                             "}")
-        wdate.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        wdate.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
+        self.wdate.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.wdate.setGeometry(3 * xscale, ypos * yscale, 300 * xscale, 100)
 
 
-        bottom = QLabel(frame1)
-        bottom.setObjectName("bottom")
-        bottom.setStyleSheet("#bottom { font-family:sans-serif; color: " +
+        self.bottom = QLabel(frame1)
+        self.bottom.setObjectName("bottom")
+        self.bottom.setStyleSheet("#bottom { font-family:sans-serif; color: " +
                             Config.textcolor +
                             "; background-color: transparent; font-size: " +
                             str(int(30 * xscale)) +
                             "px; " +
                             Config.fontattr +
                             "}")
-        bottom.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        bottom.setGeometry(0, height - 50, width, 50)
+        self.bottom.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.bottom.setGeometry(0, height - 50, width, 50)
 
-        temp = QLabel(frame1)
-        temp.setObjectName("temp")
-        temp.setStyleSheet("#temp { font-family:sans-serif; color: " +
+        self.temp = QLabel(frame1)
+        self.temp.setObjectName("temp")
+        self.temp.setStyleSheet("#temp { font-family:sans-serif; color: " +
                         Config.textcolor +
                         "; background-color: transparent; font-size: " +
                         str(int(30 * xscale)) +
                         "px; " +
                         Config.fontattr +
                         "}")
-        temp.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
-        temp.setGeometry(0, height - 100, width, 50)
+        self.temp.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
+        self.temp.setGeometry(0, height - 100, width, 50)
         self.tick()
+        self.showTemp()
         ctimer = QTimer(self)
         ctimer.timeout.connect(self.tick)
         ctimer.start(1000)
         self.show()
+        self.showFullScreen()
         
-
+    def showTemp(self):
+        do_am, nhiet_do = 90,40
+        if Config.metric:
+            self.temper.setText("Temp : "+str(nhiet_do) + u'°C')
+            #self.temper2.setText(str(100) + u'°C')
+            self.humidity.setText(Config.LHumidity +" : "+ str(do_am)+"%")
     def tick(self):
-        print('tick')
+        #print('tick')
         global hourpixmap, minpixmap, secpixmap
         global hourpixmap2, minpixmap2, secpixmap2
         global lastmin, lastday, lasttimestr

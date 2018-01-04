@@ -72,7 +72,7 @@ DateLocale = ''
 
 # Language specific wording
 LPressure = "Pressure "
-LHumidity = "Humidity "
+LHumidity = "Humidity"
 LWind = "Wind "
 Lgusting = " gusting "
 LFeelslike = "Feels like "
